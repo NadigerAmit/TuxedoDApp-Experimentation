@@ -6,4 +6,5 @@ This repository serves as an experimentation ground for building the TuxedoDApp,
 **Getting Started**
 
 **1. Clone the Repository:**
-git clone https://github.com/mlabs-haskell/Tuxedo
+
+```git clone https://github.com/mlabs-haskell/Tuxedo```
