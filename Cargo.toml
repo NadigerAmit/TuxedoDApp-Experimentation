@@ -1,0 +1,35 @@
+[package]
+name = "TuxedoDApp-Experimentation"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+wasm-bindgen = "0.2"
+getrandom = { version = "0.2", default-features = false,features = ["js"] } 
+# If above is removed will lead to error below error 
+# wasm*-unknown-unknown targets are not supported by default, you may need to enable the "js" feature.
+
+anyhow = "1.0.69"
+directories = "5.0.0"
+env_logger = { version = "0.10.0", default-features = false, optional = true } 
+jsonrpsee = { version = "0.16.2", default-features = false, optional = true } 
+
+tokio = { version = "1.25.0", default-features = false, optional = true }
+tokio_with_wasm = { version = "0.4.3", default-features = false, optional = true }
+sled = { version = "0.34.7", default-features = false, optional = true }
+hex = { version = "0.4.3", default-features = false, optional = true }
+futures = { version = "0.3", default-features = false, optional = true }
+rand = "0.8"
+
+tuxedo-template-runtime = { git = "https://github.com/Off-Narrative-Labs/Tuxedo", tag = "monthly-2023-06", default-features = false }
+tuxedo-core = { git = "https://github.com/Off-Narrative-Labs/Tuxedo", tag = "monthly-2023-06", default-features = false }
+serde = { version = "1.0.188", optional = true, default-features = false }
+sp-core = { branch = "tuxedo-v1.3.0", default_features = false, git = "https://github.com/off-narrative-labs/polkadot-sdk" }
+sp-io = { branch = "tuxedo-v1.3.0", default_features = false, git = "https://github.com/off-narrative-labs/polkadot-sdk" }
+sp-keystore = { branch = "tuxedo-v1.3.0", default_features = false, git = "https://github.com/off-narrative-labs/polkadot-sdk" }
+sp-runtime = { branch = "tuxedo-v1.3.0", default_features = false, git = "https://github.com/off-narrative-labs/polkadot-sdk" }
+sp-std = { branch = "tuxedo-v1.3.0", default_features = false, git = "https://github.com/off-narrative-labs/polkadot-sdk" }
+money = { git = "https://github.com/Off-Narrative-Labs/Tuxedo", tag = "monthly-2023-06", default-features = false }
