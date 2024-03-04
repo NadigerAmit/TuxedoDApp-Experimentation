@@ -7,4 +7,12 @@ This repository serves as an experimentation ground for building the TuxedoDApp,
 
 **1. Clone the Repository:**
 
-```git clone https://github.com/mlabs-haskell/Tuxedo```
+```https://github.com/NadigerAmit/TuxedoDApp-Experimentation.git```
+
+**2. Compile the Code:**
+
+```wasm-pack build --target web```
+
+**3. Run the DApp:**
+Serve the project's root directory with a local web server (e.g., python3 -m http.server).
+Open http://localhost:8000 in your web browser to load index.html.
